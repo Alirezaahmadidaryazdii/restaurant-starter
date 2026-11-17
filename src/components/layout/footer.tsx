@@ -18,7 +18,7 @@ const navigation = [
 
 export function Footer() {
   return (
-    <footer className="  bg-[#292522] text-white">
+    <footer className="bg-[#292522] text-white">
       <div className="mx-auto max-w-7xl px-5 pt-16 lg:px-8">
         <div className="grid grid-cols-1 gap-12 border-b border-white/10 pb-14 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1fr]">
           <div id="about" className="scroll-mt-24">
@@ -89,8 +89,11 @@ export function Footer() {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent">
                   <MapPin size={19} />
                 </div>
+
                 <div>
-                  <p className="text-sm font-semibold">آدرس رستوران</p>
+                  <p className="text-sm font-semibold">
+                    آدرس رستوران
+                  </p>
                   <p className="mt-2 text-sm leading-7 text-white/60">
                     آدرس رستوران را اینجا وارد کنید.
                   </p>
@@ -101,8 +104,11 @@ export function Footer() {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent">
                   <Phone size={19} />
                 </div>
+
                 <div>
-                  <p className="text-sm font-semibold">شماره تماس</p>
+                  <p className="text-sm font-semibold">
+                    شماره تماس
+                  </p>
                   <a
                     href="tel:"
                     className="mt-2 block text-sm text-white/60 transition-colors hover:text-white"
@@ -116,8 +122,11 @@ export function Footer() {
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/5 text-accent">
                   <Clock3 size={19} />
                 </div>
+
                 <div>
-                  <p className="text-sm font-semibold">ساعت کاری</p>
+                  <p className="text-sm font-semibold">
+                    ساعت کاری
+                  </p>
                   <p className="mt-2 text-sm text-white/60">
                     همه روزه، ساعت کاری رستوران
                   </p>
@@ -129,7 +138,7 @@ export function Footer() {
 
         <div className="flex flex-col items-center justify-between gap-4 py-6 text-center sm:flex-row sm:text-right">
           <p className="text-xs text-white/40">
-            © {new Date().getFullYear()} همه چی کباب. تمامی حقوق محفوظ است.
+            © 2026 همه چی کباب. تمامی حقوق محفوظ است.
           </p>
 
           <Link

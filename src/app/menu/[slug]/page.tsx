@@ -13,6 +13,12 @@ interface MenuCategoryPageProps {
   }>;
 }
 
+export function generateStaticParams() {
+  return foodCategories.map((category) => ({
+    slug: category.slug,
+  }));
+}
+
 export default async function MenuCategoryPage({
   params,
 }: MenuCategoryPageProps) {
@@ -32,7 +38,7 @@ export default async function MenuCategoryPage({
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="mx-auto max-w-7xl px-5 py-8 lg:px-8 md:py-12">
+      <div className="mx-auto max-w-7xl px-5 py-8 md:py-12 lg:px-8">
         <Link
           href="/"
           className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-muted transition-colors hover:text-primary"
@@ -71,6 +77,7 @@ export default async function MenuCategoryPage({
                 sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover"
               />
+
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-surface-secondary/30" />
             </div>
           </div>
@@ -80,6 +87,7 @@ export default async function MenuCategoryPage({
           <h2 className="text-xl font-bold text-foreground">
             انتخاب از منوی {category.title}
           </h2>
+
           <p className="mt-2 text-sm text-muted">
             تمام محصولات این دسته را مشاهده کنید.
           </p>
@@ -121,6 +129,7 @@ export default async function MenuCategoryPage({
                     <span className="text-xs text-muted">
                       قیمت
                     </span>
+
                     <span className="text-base font-bold text-primary">
                       {item.price.toLocaleString("fa-IR")} تومان
                     </span>

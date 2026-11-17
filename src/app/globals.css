@@ -1,0 +1,103 @@
+
+@import "tailwindcss";
+
+:root {
+  --background: #FAF7F0;
+  --foreground: #292522;
+
+  --surface: #FFFFFF;
+  --surface-secondary: #F2EDE4;
+
+  --primary: #852C2D;
+  --primary-hover: #702224;
+
+  --accent: #C58D48;
+
+  --muted: #77716E;
+  --border: #E9E1D6;
+
+  --font-body: "Pelak", sans-serif;
+}
+
+@font-face {
+  font-family: "Pelak";
+  src: url("/Fonts/Pelak/Pelak-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pelak";
+  src: url("/Fonts/Pelak/Pelak-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pelak";
+  src: url("/Fonts/Pelak/Pelak-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pelak";
+  src: url("/Fonts/Pelak/Pelak-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+
+  --font-sans: "Pelak", sans-serif;
+  --font-mono: var(--font-geist-mono);
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-body);
+    direction: rtl;
+    margin: 0;
+  }
+
+  button,
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  ::selection {
+    background: var(--primary);
+    color: #FFFFFF;
+  }
+}
